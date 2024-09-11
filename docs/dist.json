@@ -339,7 +339,7 @@
           "Badges"
         ],
         "summary": "Returns badges list defined for tenant.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\nThis endpoint respects the ```Accept-Language``` header as specified [here](/accept-language)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language)",
         "parameters": [
           {
             "name": "badgeType",
@@ -407,7 +407,7 @@
           "Badges"
         ],
         "summary": "Returns badges list defined for tenant.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\nThis endpoint respects the ```Accept-Language``` header as specified [here](/accept-language)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language)",
         "parameters": [
           {
             "name": "badgeType",
@@ -957,7 +957,7 @@
           "Person"
         ],
         "summary": "Gets a members badges",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\nThis endpoint respects the ```Accept-Language``` header as specified [here](/accept-language)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language)",
         "parameters": [
           {
             "name": "sourceId",
@@ -1035,7 +1035,7 @@
           "Person"
         ],
         "summary": "Gets a members badges",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\nThis endpoint respects the ```Accept-Language``` header as specified [here](/accept-language)",
+        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language)",
         "parameters": [
           {
             "name": "sourceId",
