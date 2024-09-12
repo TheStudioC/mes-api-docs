@@ -8,7 +8,7 @@ Available languages were set up during onboarding. If these need to be modified,
 ## Implementation Notes
 No translations are automatically generated; all are based on content that has been entered manually in the MES in the relevant editor fields. For example, badges must have content entered for a specific language as shown below:
 
-![Language image example](./docs/language-help.png)
+![Language image example](./language-help.png)
 
 The format for this header is as described [on the relevant MDN page](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language)
 
