@@ -1,4 +1,3 @@
-
 {
   "openapi": "3.0.1",
   "info": {
@@ -2093,6 +2092,87 @@
         }
       }
     },
+    "/api_ext/v1/Person/{sourceId}/DirectMessages/{channelType}": {
+      "post": {
+        "tags": [
+          "Person"
+        ],
+        "summary": "Gets a members direct messages by given channel type, limited by take size (default 6). Important, in cases of all ad type, the take size may not include all types depending on priority sorting.",
+        "parameters": [
+          {
+            "name": "sourceId",
+            "in": "path",
+            "description": "Person Source Id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "channelType",
+            "in": "path",
+            "description": "Channel type. Values: push, email, sms",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "default": "all"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "The page of responses.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The number of messages to retrieve.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DirectMessageResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DirectMessageResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DirectMessageResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api_ext/v1/Poll/Submit": {
       "post": {
         "tags": [
@@ -3480,6 +3560,12 @@
           "cardBorderRadiusImageOnly": {
             "type": "boolean"
           },
+          "hideLoadMoreForYou": {
+            "type": "boolean"
+          },
+          "hideLoadMoreNews": {
+            "type": "boolean"
+          },
           "modifiedDate": {
             "type": "string",
             "format": "date-time",
@@ -3494,6 +3580,78 @@
           },
           "hideMyConnectionsCard": {
             "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DirectMessageItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "lastPublishedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "channel": {
+            "type": "string",
+            "nullable": true
+          },
+          "copy": {
+            "type": "string",
+            "nullable": true
+          },
+          "interstitialHeadline": {
+            "type": "string",
+            "nullable": true
+          },
+          "interstitialCopy": {
+            "type": "string",
+            "nullable": true
+          },
+          "interstitialLinkText": {
+            "type": "string",
+            "nullable": true
+          },
+          "interstitialLinkUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "openAction": {
+            "type": "string",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "nullable": true
+          },
+          "campaignName": {
+            "type": "string",
+            "nullable": true
+          },
+          "campaignCategoryName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DirectMessageResponse": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DirectMessageItem"
+            },
+            "nullable": true
+          },
+          "total": {
+            "type": "integer",
+            "format": "int64"
           }
         },
         "additionalProperties": false
@@ -4210,7 +4368,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": { }
+        "additionalProperties": {}
       },
       "ProfilePictureStyles": {
         "type": "object",
