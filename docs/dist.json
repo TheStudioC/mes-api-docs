@@ -36,14 +36,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AudienceResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -65,11 +57,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -82,7 +69,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       },
       "get": {
         "tags": [
@@ -104,14 +96,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AudienceResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -133,11 +117,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -150,7 +129,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Audience/Get/{audienceId}": {
@@ -176,14 +160,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AudienceResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -205,7 +181,12 @@
           "500": {
             "description": "Oops! Can't complete the request now."
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       },
       "get": {
         "tags": [
@@ -229,14 +210,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/AudienceResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -258,7 +231,12 @@
           "500": {
             "description": "Oops! Can't complete the request now."
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Audience/MailchimpExport/{audienceId}": {
@@ -310,11 +288,6 @@
           "400": {
             "description": "Failed operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -330,7 +303,12 @@
           "500": {
             "description": "Oops! Can't complete the request now."
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Badges": {
@@ -354,14 +332,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BadgeResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -383,11 +353,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -400,7 +365,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       },
       "get": {
         "tags": [
@@ -422,14 +392,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BadgeResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -451,11 +413,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -468,7 +425,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Dashboard/Links": {
@@ -482,14 +444,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DashboardLinkResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -511,11 +465,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -528,7 +477,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       },
       "get": {
         "tags": [
@@ -540,14 +494,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DashboardLinkResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -569,11 +515,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -586,7 +527,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Dashboard/Settings": {
@@ -599,11 +545,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/DashboardSettingsModel"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/DashboardSettingsModel"
@@ -619,7 +560,12 @@
           "500": {
             "description": "Oops! Can't complete the request now."
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       },
       "get": {
         "tags": [
@@ -630,11 +576,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/DashboardSettingsModel"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/DashboardSettingsModel"
@@ -650,7 +591,12 @@
           "500": {
             "description": "Oops! Can't complete the request now."
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Messages": {
@@ -683,14 +629,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MessageSearchResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -712,11 +650,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -729,7 +662,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       },
       "get": {
         "tags": [
@@ -760,14 +698,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MessageSearchResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -789,11 +719,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -806,7 +731,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Person/{sourceId}": {
@@ -832,14 +762,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PersonResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -861,11 +783,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -878,7 +795,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       },
       "get": {
         "tags": [
@@ -902,14 +824,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PersonResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -931,11 +845,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -948,7 +857,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Person/{sourceId}/Badges": {
@@ -982,14 +896,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BadgeResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -1011,11 +917,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -1028,7 +929,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       },
       "get": {
         "tags": [
@@ -1060,14 +966,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/BadgeResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -1089,11 +987,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -1106,7 +999,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Person/Create": {
@@ -1139,11 +1037,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/PersonResults"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PersonResults"
@@ -1159,11 +1052,6 @@
           "500": {
             "description": "Internal Server Error",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/PersonResults"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PersonResults"
@@ -1176,7 +1064,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Person/Find": {
@@ -1231,14 +1124,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PersonFindResult"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -1260,11 +1145,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -1277,7 +1157,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Person/{sourceId}/Groups": {
@@ -1303,14 +1188,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GroupResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -1332,11 +1209,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -1349,7 +1221,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       },
       "get": {
         "tags": [
@@ -1373,14 +1250,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GroupResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -1402,11 +1271,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -1419,7 +1283,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Person/{sourceId}/Messages/{adtype}": {
@@ -1464,14 +1333,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DashboardMessageResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -1493,11 +1354,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -1510,7 +1366,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Person/AnonymousMessages": {
@@ -1530,20 +1391,21 @@
               "format": "int32",
               "default": 6
             }
+          },
+          {
+            "name": "dashboard-url",
+            "in": "header",
+            "description": "Tenant Application Url in form of https://tenantName.thestudioc.org",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DashboardMessageResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -1565,11 +1427,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -1608,14 +1465,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PersonTraitResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -1637,11 +1486,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -1654,7 +1498,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       },
       "get": {
         "tags": [
@@ -1678,14 +1527,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PersonTraitResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -1707,11 +1548,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -1724,7 +1560,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Person/{sourceId}/Checkins": {
@@ -1750,14 +1591,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CheckinResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -1779,11 +1612,6 @@
           "400": {
             "description": "Failed operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ProblemDetails"
@@ -1799,11 +1627,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -1816,7 +1639,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Person/{sourceId}/SaveCheckin": {
@@ -1879,11 +1707,6 @@
           "400": {
             "description": "Failed operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ProblemDetails"
@@ -1899,11 +1722,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -1916,7 +1734,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Person/{sourceId}/get-token": {
@@ -1941,11 +1764,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -1961,11 +1779,6 @@
           "404": {
             "description": "Resource not found.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -1981,11 +1794,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -1998,7 +1806,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Person/get-tracking-token": {
@@ -2032,11 +1845,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2052,11 +1860,6 @@
           "404": {
             "description": "Resource not found.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2072,11 +1875,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2089,7 +1887,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Person/{sourceId}/DirectMessages/{channelType}": {
@@ -2097,7 +1900,7 @@
         "tags": [
           "Person"
         ],
-        "summary": "Gets a members direct messages by given channel type, limited by take size (default 6). Important, in cases of all ad type, the take size may not include all types depending on priority sorting.",
+        "summary": "Gets a members direct messages by given channel type, limited by page size (default 10).",
         "parameters": [
           {
             "name": "sourceId",
@@ -2112,7 +1915,7 @@
           {
             "name": "channelType",
             "in": "path",
-            "description": "Channel type. Values: push, email, sms",
+            "description": "Channel type. Values: push, email, sms. Default is all.",
             "required": true,
             "schema": {
               "type": "string",
@@ -2132,7 +1935,7 @@
           {
             "name": "pageSize",
             "in": "query",
-            "description": "The number of messages to retrieve.",
+            "description": "The number of messages to retrieve. Default is 10.",
             "schema": {
               "type": "integer",
               "format": "int32",
@@ -2144,14 +1947,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/DirectMessageResponse"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -2170,7 +1965,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Poll/Submit": {
@@ -2204,11 +2004,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2224,11 +2019,6 @@
           "400": {
             "description": "Failed operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProblemDetails"
-                }
-              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ProblemDetails"
@@ -2244,11 +2034,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2261,7 +2046,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Poll/Results/Html": {
@@ -2304,11 +2094,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2324,11 +2109,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2341,7 +2121,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Poll/Results": {
@@ -2376,14 +2161,6 @@
           "200": {
             "description": "Successful operation.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PollResults"
-                  }
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "array",
@@ -2405,11 +2182,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2422,7 +2194,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Tracking/DashboardView": {
@@ -2473,11 +2250,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2490,7 +2262,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Tracking/Message": {
@@ -2542,11 +2319,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2559,7 +2331,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Tracking/Badge": {
@@ -2611,11 +2388,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2628,7 +2400,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/api_ext/v1/Tracking/Link": {
@@ -2673,11 +2450,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2690,7 +2462,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
       }
     },
     "/tracking_api/v1/Tracking/DashboardView": {
@@ -2733,11 +2510,6 @@
           "404": {
             "description": "Resource not found.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2753,11 +2525,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2770,7 +2537,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            " Bearer Tracking Token": [ ]
+          }
+        ]
       }
     },
     "/tracking_api/v1/Tracking/Message": {
@@ -2814,11 +2586,6 @@
           "404": {
             "description": "Resource not found.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2834,11 +2601,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2851,7 +2613,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            " Bearer Tracking Token": [ ]
+          }
+        ]
       }
     },
     "/tracking_api/v1/Tracking/Badge": {
@@ -2895,11 +2662,6 @@
           "404": {
             "description": "Resource not found.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2915,11 +2677,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2932,7 +2689,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            " Bearer Tracking Token": [ ]
+          }
+        ]
       }
     },
     "/tracking_api/v1/Tracking/Link": {
@@ -2969,11 +2731,6 @@
           "404": {
             "description": "Resource not found.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -2989,11 +2746,6 @@
           "500": {
             "description": "Oops! Can't complete the request now.",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
               "application/json": {
                 "schema": {
                   "type": "string"
@@ -3006,7 +2758,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            " Bearer Tracking Token": [ ]
+          }
+        ]
       }
     }
   },
@@ -4368,7 +4125,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": {}
+        "additionalProperties": { }
       },
       "ProfilePictureStyles": {
         "type": "object",
@@ -4448,6 +4205,19 @@
           }
         },
         "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      " Bearer Tracking Token": {
+        "type": "http",
+        "description": "Obtained from using Basic Authentication on endpoint: /api_ext/v1/Person/get-tracking-token",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      },
+      "Basic Authentication": {
+        "type": "http",
+        "description": "Obtained from application instance Account Details / Integrations section",
+        "scheme": "basic"
       }
     }
   }
