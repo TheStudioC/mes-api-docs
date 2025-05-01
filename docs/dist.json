@@ -21,7 +21,7 @@
           "Audience"
         ],
         "summary": "Gets an audience by name.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p>",
         "parameters": [
           {
             "name": "name",
@@ -81,7 +81,7 @@
           "Audience"
         ],
         "summary": "Gets an audience by name.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p>",
         "parameters": [
           {
             "name": "name",
@@ -143,7 +143,7 @@
           "Audience"
         ],
         "summary": "Gets an audience by Id.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p>",
         "parameters": [
           {
             "name": "audienceId",
@@ -193,7 +193,7 @@
           "Audience"
         ],
         "summary": "Gets an audience by Id.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p>",
         "parameters": [
           {
             "name": "audienceId",
@@ -317,7 +317,7 @@
           "Badges"
         ],
         "summary": "Returns badges list defined for tenant.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\r\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language)",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p><p>This endpoint respects the <code>Accept-Language</code> header as described <a href=\"https://thestudioc.github.io/mes-api-docs/accept-language\">here</a>.</p>",
         "parameters": [
           {
             "name": "badgeType",
@@ -377,7 +377,7 @@
           "Badges"
         ],
         "summary": "Returns badges list defined for tenant.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\r\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language)",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p><p>This endpoint respects the <code>Accept-Language</code> header as described <a href=\"https://thestudioc.github.io/mes-api-docs/accept-language\">here</a>.</p>",
         "parameters": [
           {
             "name": "badgeType",
@@ -439,7 +439,7 @@
           "Dashboard"
         ],
         "summary": "Returns dashboard links defined for tenant.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p><p>This endpoint respects the <code>Accept-Language</code> header as described <a href=\"https://thestudioc.github.io/mes-api-docs/accept-language\">here</a>.</p>",
         "responses": {
           "200": {
             "description": "Successful operation.",
@@ -489,7 +489,7 @@
           "Dashboard"
         ],
         "summary": "Returns dashboard links defined for tenant.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p><p>This endpoint respects the <code>Accept-Language</code> header as described <a href=\"https://thestudioc.github.io/mes-api-docs/accept-language\">here</a>.</p>",
         "responses": {
           "200": {
             "description": "Successful operation.",
@@ -599,13 +599,92 @@
         ]
       }
     },
+    "/v2/Dashboard/Settings": {
+      "get": {
+        "tags": [
+          "Dashboard"
+        ],
+        "summary": "Returns dashboard settings defined for tenant with multi-lingual support.",
+        "description": "<p>This endpoint respects the <code>Accept-Language</code> header as described <a href=\"https://thestudioc.github.io/mes-api-docs/accept-language\">here</a>.</p>",
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DashboardSettingsModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DashboardSettingsModel"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Oops! Can't complete the request now."
+          }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
+      }
+    },
+    "/v2/Dashboard/Cultures": {
+      "get": {
+        "tags": [
+          "Dashboard"
+        ],
+        "summary": "Returns cultures defined for tenant.",
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CultureResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CultureResponse"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Oops! Can't complete the request now."
+          }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
+      }
+    },
     "/api_ext/v1/Messages": {
       "post": {
         "tags": [
           "Messages"
         ],
         "summary": "Gets active messages by Ids, these messages will contain unpersonalized information.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p><p>This endpoint respects the <code>Accept-Language</code> header as described <a href=\"https://thestudioc.github.io/mes-api-docs/accept-language\">here</a>.</p>",
         "requestBody": {
           "content": {
             "application/json": {
@@ -674,7 +753,7 @@
           "Messages"
         ],
         "summary": "Gets active messages by Ids, these messages will contain unpersonalized information.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p><p>This endpoint respects the <code>Accept-Language</code> header as described <a href=\"https://thestudioc.github.io/mes-api-docs/accept-language\">here</a>.</p>",
         "requestBody": {
           "content": {
             "application/json": {
@@ -745,7 +824,7 @@
           "Person"
         ],
         "summary": "Gets a member by source Id.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p>",
         "parameters": [
           {
             "name": "sourceId",
@@ -807,7 +886,7 @@
           "Person"
         ],
         "summary": "Gets a member by source Id.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p>",
         "parameters": [
           {
             "name": "sourceId",
@@ -871,7 +950,7 @@
           "Person"
         ],
         "summary": "Gets a members badges",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\r\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language)",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p><p>This endpoint respects the <code>Accept-Language</code> header as described <a href=\"https://thestudioc.github.io/mes-api-docs/accept-language\">here</a>.</p>",
         "parameters": [
           {
             "name": "sourceId",
@@ -941,7 +1020,7 @@
           "Person"
         ],
         "summary": "Gets a members badges",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.\r\n\r\nThis endpoint respects the ```Accept-Language``` header as described [here](https://thestudioc.github.io/mes-api-docs/accept-language)",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p><p>This endpoint respects the <code>Accept-Language</code> header as described <a href=\"https://thestudioc.github.io/mes-api-docs/accept-language\">here</a>.</p>",
         "parameters": [
           {
             "name": "sourceId",
@@ -1078,7 +1157,7 @@
           "Person"
         ],
         "summary": "Finds a person with case insensitive exact on matching first name and last name. If email and/or phone are provided then they must match exactly as well.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p>",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -1171,7 +1250,7 @@
           "Person"
         ],
         "summary": "Gets a members groups.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p>",
         "parameters": [
           {
             "name": "sourceId",
@@ -1233,7 +1312,7 @@
           "Person"
         ],
         "summary": "Gets a members groups.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p>",
         "parameters": [
           {
             "name": "sourceId",
@@ -1297,7 +1376,7 @@
           "Person"
         ],
         "summary": "Gets a members messages by given ad type, limited by take size (default 6). Important, in cases of all ad type, the take size may not include all types depending on priority sorting.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p><p>This endpoint respects the <code>Accept-Language</code> header as described <a href=\"https://thestudioc.github.io/mes-api-docs/accept-language\">here</a>.</p>",
         "parameters": [
           {
             "name": "sourceId",
@@ -1380,7 +1459,7 @@
           "Person"
         ],
         "summary": "Gets an anonymous members messages limited by take size (default 6).",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p><p>This endpoint respects the <code>Accept-Language</code> header as described <a href=\"https://thestudioc.github.io/mes-api-docs/accept-language\">here</a>.</p>",
         "parameters": [
           {
             "name": "take",
@@ -1448,7 +1527,7 @@
           "Person"
         ],
         "summary": "Gets a members traits.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p>",
         "parameters": [
           {
             "name": "sourceId",
@@ -1510,7 +1589,7 @@
           "Person"
         ],
         "summary": "Gets a members traits.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p>",
         "parameters": [
           {
             "name": "sourceId",
@@ -1574,7 +1653,7 @@
           "Person"
         ],
         "summary": "Gets a members available checkins.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p><p>This endpoint respects the <code>Accept-Language</code> header as described <a href=\"https://thestudioc.github.io/mes-api-docs/accept-language\">here</a>.</p>",
         "parameters": [
           {
             "name": "sourceId",
@@ -2060,7 +2139,7 @@
           "Poll"
         ],
         "summary": "Gets an HTML version of a poll for given member Id.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "This endpoint returns a raw Html string.",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -2135,7 +2214,7 @@
           "Poll"
         ],
         "summary": "Gets the results of a poll.",
-        "description": "The API returns data using the [JSON API Specification](https://jsonapi.org/), which differs slightly from the provided example.",
+        "description": "<p>The API returns data using the <a href=\"https://jsonapi.org/\">JSON API Specification</a>, which differs slightly from the provided example.</p>",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -2200,6 +2279,173 @@
             "Basic Authentication": [ ]
           }
         ]
+      }
+    },
+    "/v2/Poll/Results/Html/{pollId}/{memberId}": {
+      "get": {
+        "tags": [
+          "Poll"
+        ],
+        "summary": "Gets an HTML version of a poll for given member Id with multi-lingual support.",
+        "description": "\r\nReturns a default object with an id of 0 if Poll Id was not found.<p>This endpoint respects the <code>Accept-Language</code> header as described <a href=\"https://thestudioc.github.io/mes-api-docs/accept-language\">here</a>.</p>",
+        "parameters": [
+          {
+            "name": "pollId",
+            "in": "path",
+            "description": "Poll Id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "memberId",
+            "in": "path",
+            "description": "Member Id: Used to personalize the response for a certain member.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PollResultsHtmlResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PollResultsHtmlResponse"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Oops! Can't complete the request now.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
+      }
+    },
+    "/v2/Poll/Results/{pollId}": {
+      "get": {
+        "tags": [
+          "Poll"
+        ],
+        "summary": "Gets the results of a poll with multi-lingual support.",
+        "description": "\r\nReturns a default object with an id of 0 if Poll Id was not found.<p>This endpoint respects the <code>Accept-Language</code> header as described <a href=\"https://thestudioc.github.io/mes-api-docs/accept-language\">here</a>.</p>",
+        "parameters": [
+          {
+            "name": "pollId",
+            "in": "path",
+            "description": "Poll Id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "combineOther",
+            "in": "query",
+            "description": "If set to true, returns any answers submitted under the \"Other\" field (empty guid) as a single \"Other\" fieldItem with a summed up count and percentage.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PollResultsResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PollResultsResponse"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Oops! Can't complete the request now.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
+      }
+    },
+    "/buildinfo": {
+      "get": {
+        "tags": [
+          "StudioCAdmin.API"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": { }
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/api_ext/v1/Tracking/DashboardView": {
@@ -2294,7 +2540,7 @@
                   },
                   "trackingType": {
                     "type": "string",
-                    "description": "Possible values: message_view, message_click, video_click, interstitial_open, interstitial_click, interstitial_video_click"
+                    "description": "Possible values: message_view, message_click, video_click, interstitial_open, interstitial_click, interstitial_video_click, push_interstitial_open, push_interstitial_click"
                   }
                 }
               },
@@ -2564,7 +2810,7 @@
                   },
                   "trackingType": {
                     "type": "string",
-                    "description": "Possible values: message_view, message_click, video_click, interstitial_open, interstitial_click, interstitial_video_click"
+                    "description": "Possible values: message_view, message_click, video_click, interstitial_open, interstitial_click, interstitial_video_click, push_interstitial_open, push_interstitial_click"
                   }
                 }
               },
@@ -2800,6 +3046,13 @@
             "type": "integer",
             "format": "int64"
           },
+          "cultureCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDefaultCulture": {
+            "type": "boolean"
+          },
           "badgeName": {
             "type": "string",
             "nullable": true
@@ -2878,13 +3131,6 @@
             "nullable": true
           },
           "badgeOn": {
-            "type": "boolean"
-          },
-          "cultureCode": {
-            "type": "string",
-            "nullable": true
-          },
-          "isDefaultCulture": {
             "type": "boolean"
           }
         },
@@ -2977,6 +3223,13 @@
           "id": {
             "type": "integer",
             "format": "int64"
+          },
+          "cultureCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDefaultCulture": {
+            "type": "boolean"
           },
           "name": {
             "type": "string",
@@ -3151,12 +3404,39 @@
         "additionalProperties": false,
         "description": "Creates a person record using the API"
       },
+      "CultureResponse": {
+        "type": "object",
+        "properties": {
+          "cultureCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "dashboardEnabled": {
+            "type": "boolean"
+          },
+          "isDefaultCulture": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "DashboardLinkResponse": {
         "type": "object",
         "properties": {
           "id": {
             "type": "integer",
             "format": "int64"
+          },
+          "cultureCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDefaultCulture": {
+            "type": "boolean"
           },
           "linkText": {
             "type": "string",
@@ -3183,6 +3463,13 @@
           "id": {
             "type": "integer",
             "format": "int64"
+          },
+          "cultureCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDefaultCulture": {
+            "type": "boolean"
           },
           "messageType": {
             "type": "string",
@@ -3246,6 +3533,13 @@
       "DashboardSettingsModel": {
         "type": "object",
         "properties": {
+          "cultureCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDefaultCulture": {
+            "type": "boolean"
+          },
           "greetingTextTypography": {
             "$ref": "#/components/schemas/TypographyStyles"
           },
@@ -3374,6 +3668,10 @@
             "nullable": true
           },
           "interstitialLinkUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "interstitialImage": {
             "type": "string",
             "nullable": true
           },
@@ -3621,6 +3919,13 @@
           "id": {
             "type": "integer",
             "format": "int64"
+          },
+          "cultureCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDefaultCulture": {
+            "type": "boolean"
           },
           "adTypeId": {
             "type": "integer",
@@ -4066,7 +4371,8 @@
           },
           "value": {
             "type": "string",
-            "nullable": true
+            "nullable": true,
+            "deprecated": true
           },
           "count": {
             "type": "integer",
@@ -4096,6 +4402,55 @@
           "totalResponses": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PollResultsHtmlResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cultureCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDefaultCulture": {
+            "type": "boolean"
+          },
+          "html": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PollResultsResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cultureCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDefaultCulture": {
+            "type": "boolean"
+          },
+          "totalResponses": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "answers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PollResult"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
