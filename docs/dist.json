@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.4",
   "info": {
     "title": "The StudioC REST API",
     "description": "See https://github.com/TheStudioC/mes-api-docs for more information.",
@@ -324,7 +324,7 @@
             "in": "query",
             "description": "Next Step = 1, Milestone = 2",
             "schema": {
-              "$ref": "#/components/schemas/BadgeType"
+              "$ref": "#/components/schemas/BadgeTypeNullable"
             }
           }
         ],
@@ -384,7 +384,7 @@
             "in": "query",
             "description": "Next Step = 1, Milestone = 2",
             "schema": {
-              "$ref": "#/components/schemas/BadgeType"
+              "$ref": "#/components/schemas/BadgeTypeNullable"
             }
           }
         ],
@@ -967,7 +967,7 @@
             "in": "query",
             "description": "Next Step = 1, Milestone = 2",
             "schema": {
-              "$ref": "#/components/schemas/BadgeType"
+              "$ref": "#/components/schemas/BadgeTypeNullable"
             }
           }
         ],
@@ -1037,7 +1037,7 @@
             "in": "query",
             "description": "Next Step = 1, Milestone = 2",
             "schema": {
-              "$ref": "#/components/schemas/BadgeType"
+              "$ref": "#/components/schemas/BadgeTypeNullable"
             }
           }
         ],
@@ -2019,6 +2019,15 @@
               "type": "integer",
               "format": "int32",
               "default": 10
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "The sort direction for items. Default is ascending, Values: ascending|descending",
+            "schema": {
+              "type": "string",
+              "default": "ascending"
             }
           }
         ],
@@ -3181,15 +3190,16 @@
         },
         "additionalProperties": false
       },
-      "BadgeType": {
+      "BadgeTypeNullable": {
         "enum": [
           0,
           1,
-          2
+          2,
+          null
         ],
         "type": "integer",
-        "description": "Badge Types: Next Step = 1, Milestone = 2",
-        "format": "int32"
+        "format": "int32",
+        "nullable": true
       },
       "ButtonStyles": {
         "type": "object",
@@ -3640,59 +3650,97 @@
         "properties": {
           "id": {
             "type": "integer",
+            "description": "The system id",
             "format": "int64"
+          },
+          "systemName": {
+            "type": "string",
+            "description": "The system name of the message",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "description": "The title/subject heading of the message",
+            "nullable": true
           },
           "lastPublishedDate": {
             "type": "string",
+            "description": "The date of submission to broadcast engine",
+            "format": "date-time",
+            "nullable": true
+          },
+          "startDate": {
+            "type": "string",
+            "description": "The scheduled start date of the message if set, otherwise the date of submission to the broadcast engine",
             "format": "date-time",
             "nullable": true
           },
           "channel": {
             "type": "string",
+            "description": "The channel used for the direct message",
             "nullable": true
           },
           "copy": {
             "type": "string",
+            "description": "The message body copy",
             "nullable": true
           },
           "interstitialHeadline": {
             "type": "string",
+            "description": "The interstitial headline",
             "nullable": true
           },
           "interstitialCopy": {
             "type": "string",
+            "description": "The interstitial message copy",
             "nullable": true
+          },
+          "interstitialCopyHtml": {
+            "$ref": "#/components/schemas/HtmlString"
           },
           "interstitialLinkText": {
             "type": "string",
+            "description": "The interstitial link text",
             "nullable": true
           },
           "interstitialLinkUrl": {
             "type": "string",
+            "description": "The interstitial link destination",
             "nullable": true
           },
           "interstitialImage": {
             "type": "string",
+            "description": "The interstitial image",
+            "nullable": true
+          },
+          "interstitialMediaLink": {
+            "type": "string",
+            "description": "The interstitial media link which can be a video or image (gif,jpg) etc",
             "nullable": true
           },
           "openAction": {
             "type": "string",
+            "description": "The open action",
             "nullable": true
           },
           "url": {
             "type": "string",
+            "description": "The url / deep link of the message",
             "nullable": true
           },
           "campaignName": {
             "type": "string",
+            "description": "The campaign name for the message",
             "nullable": true
           },
           "campaignCategoryName": {
             "type": "string",
+            "description": "The campaign category name for the message",
             "nullable": true
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "API Contract to For Direct Messages"
       },
       "DirectMessageResponse": {
         "type": "object",
