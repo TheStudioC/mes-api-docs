@@ -1974,6 +1974,64 @@
         ]
       }
     },
+    "/api_ext/v1/Person/{sourceId}/DirectMessage/{messageId}": {
+      "post": {
+        "tags": [
+          "Person"
+        ],
+        "summary": "Gets a members direct message by the message Id.",
+        "parameters": [
+          {
+            "name": "sourceId",
+            "in": "path",
+            "description": "Person Source Id",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "messageId",
+            "in": "path",
+            "description": "Message Id to retrieve.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DirectMessageResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DirectMessageResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Basic Authentication": [ ]
+          }
+        ]
+      }
+    },
     "/api_ext/v1/Person/{sourceId}/DirectMessages/{channelType}": {
       "post": {
         "tags": [
@@ -3710,12 +3768,12 @@
           },
           "interstitialImage": {
             "type": "string",
-            "description": "The interstitial image",
+            "description": "The interstitial image or gif. Will be blank if using a video",
             "nullable": true
           },
-          "interstitialMediaLink": {
+          "interstitialVideoLink": {
             "type": "string",
-            "description": "The interstitial media link which can be a video or image (gif,jpg) etc",
+            "description": "The interstitial video link. Will be blank if not using a video",
             "nullable": true
           },
           "openAction": {
