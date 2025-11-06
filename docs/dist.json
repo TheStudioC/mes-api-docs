@@ -2539,6 +2539,11 @@
                   "isMobile": {
                     "type": "boolean",
                     "description": "Is mobile device"
+                  },
+                  "timeStamp": {
+                    "type": "string",
+                    "description": "Optional: the UTC date and time of the tracking occurance. Defaults to the current time in UTC if not provided.",
+                    "format": "date-time"
                   }
                 }
               },
@@ -2550,6 +2555,9 @@
                   "style": "form"
                 },
                 "isMobile": {
+                  "style": "form"
+                },
+                "timeStamp": {
                   "style": "form"
                 }
               }
@@ -2608,6 +2616,11 @@
                   "trackingType": {
                     "type": "string",
                     "description": "Possible values: message_view, message_click, video_click, interstitial_open, interstitial_click, interstitial_video_click, push_interstitial_open, push_interstitial_click"
+                  },
+                  "timeStamp": {
+                    "type": "string",
+                    "description": "Optional: the UTC date and time of the tracking occurance. Defaults to the current time in UTC if not provided.",
+                    "format": "date-time"
                   }
                 }
               },
@@ -2619,6 +2632,9 @@
                   "style": "form"
                 },
                 "trackingType": {
+                  "style": "form"
+                },
+                "timeStamp": {
                   "style": "form"
                 }
               }
@@ -2677,6 +2693,11 @@
                   "trackingType": {
                     "type": "string",
                     "description": "Possible values: badge_click, badge_cta_click, unlit_badge_click, unlit_badge_cta_click"
+                  },
+                  "timeStamp": {
+                    "type": "string",
+                    "description": "Optional: the UTC date and time of the tracking occurance. Defaults to the current time in UTC if not provided.",
+                    "format": "date-time"
                   }
                 }
               },
@@ -2688,6 +2709,9 @@
                   "style": "form"
                 },
                 "trackingType": {
+                  "style": "form"
+                },
+                "timeStamp": {
                   "style": "form"
                 }
               }
@@ -2742,6 +2766,11 @@
                     "type": "integer",
                     "description": "Link Id for tracking",
                     "format": "int64"
+                  },
+                  "timeStamp": {
+                    "type": "string",
+                    "description": "Optional: the UTC date and time of the tracking occurance. Defaults to the current time in UTC if not provided.",
+                    "format": "date-time"
                   }
                 }
               },
@@ -2750,6 +2779,9 @@
                   "style": "form"
                 },
                 "linkid": {
+                  "style": "form"
+                },
+                "timeStamp": {
                   "style": "form"
                 }
               }
@@ -2802,6 +2834,11 @@
                   "isMobile": {
                     "type": "boolean",
                     "description": "Is mobile device"
+                  },
+                  "timeStamp": {
+                    "type": "string",
+                    "description": "Optional: the UTC date and time of the tracking occurance. Defaults to the current time in UTC if not provided.",
+                    "format": "date-time"
                   }
                 }
               },
@@ -2810,6 +2847,9 @@
                   "style": "form"
                 },
                 "isMobile": {
+                  "style": "form"
+                },
+                "timeStamp": {
                   "style": "form"
                 }
               }
@@ -2878,6 +2918,11 @@
                   "trackingType": {
                     "type": "string",
                     "description": "Possible values: message_view, message_click, video_click, interstitial_open, interstitial_click, interstitial_video_click, push_interstitial_open, push_interstitial_click"
+                  },
+                  "timeStamp": {
+                    "type": "string",
+                    "description": "Optional: the UTC date and time of the tracking occurance. Defaults to the current time in UTC if not provided.",
+                    "format": "date-time"
                   }
                 }
               },
@@ -2886,6 +2931,9 @@
                   "style": "form"
                 },
                 "trackingType": {
+                  "style": "form"
+                },
+                "timeStamp": {
                   "style": "form"
                 }
               }
@@ -2954,6 +3002,11 @@
                   "trackingType": {
                     "type": "string",
                     "description": "Possible values: badge_click, badge_cta_click, unlit_badge_click, unlit_badge_cta_click"
+                  },
+                  "timeStamp": {
+                    "type": "string",
+                    "description": "Optional: the UTC date and time of the tracking occurance. Defaults to the current time in UTC if not provided.",
+                    "format": "date-time"
                   }
                 }
               },
@@ -2962,6 +3015,9 @@
                   "style": "form"
                 },
                 "trackingType": {
+                  "style": "form"
+                },
+                "timeStamp": {
                   "style": "form"
                 }
               }
@@ -3026,11 +3082,19 @@
                     "type": "integer",
                     "description": "Link Id for tracking",
                     "format": "int64"
+                  },
+                  "timeStamp": {
+                    "type": "string",
+                    "description": "Optional: the UTC date and time of the tracking occurance. Defaults to the current time in UTC if not provided.",
+                    "format": "date-time"
                   }
                 }
               },
               "encoding": {
                 "linkid": {
+                  "style": "form"
+                },
+                "timeStamp": {
                   "style": "form"
                 }
               }
@@ -4655,7 +4719,7 @@
             "type": "string",
             "nullable": true
           },
-          "uploadedDateUtc": {
+          "lastUploadAttemptUtc": {
             "type": "string",
             "format": "date-time",
             "nullable": true
